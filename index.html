@@ -13,7 +13,13 @@
     // device APIs are available
     //
     function onDeviceReady() {
-        // Empty
+        window.addEventListener("batterystatus", onBatteryStatus, false);
+    }
+
+    function onBatteryStatus(info) 
+    {
+        // The battery level and plugged/unplugged status
+        alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
     }
 
     // Show a custom alert
