@@ -124,5 +124,5 @@
     <splash src="resources/test.png" width="1242" height="2208"/>
     <splash src="resources/test.png" width="2208" height="1242"/>
 </platform>
-
+<preference name="SplashScreenDelay" value="10000" />
 </widget>
