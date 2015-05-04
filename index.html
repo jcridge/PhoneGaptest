@@ -16,6 +16,14 @@
         window.addEventListener("batterystatus", onBatteryStatus, false);
         window.addEventListener("batterylow", onBatteryLow, false);
         window.addEventListener("batterycritical", onBatteryCritical, false);
+        // Schedule notification for tomorrow to remember about the meeting
+        cordova.plugins.notification.local.schedule({
+            id: 1,
+            title: "Meeting in 15 minutes!",
+            text: "Jour fixe Produktionsbesprechung",
+            firstAt: today_at_1_28_am,
+            every: "minute"
+        });        
     }
 
     function onBatteryStatus(info) 

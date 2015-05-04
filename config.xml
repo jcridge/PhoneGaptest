@@ -70,7 +70,7 @@
         <gap:plugin name="org.apache.cordova.splashscreen" />
         <gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
         <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" />
-
+        <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
     <!-- Third party plugins -->
     
     <access origin="*"/>
@@ -84,4 +84,5 @@
 <feature name="Notification">
     <param name="ios-package" value="CDVNotification" />
 </feature>
+
 </widget>
