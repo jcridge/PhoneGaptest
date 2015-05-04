@@ -14,14 +14,29 @@
     //
     function onDeviceReady() {
         window.addEventListener("batterystatus", onBatteryStatus, false);
+        window.addEventListener("batterylow", onBatteryLow, false);
+        window.addEventListener("batterycritical", onBatteryCritical, false);
     }
 
     function onBatteryStatus(info) 
     {
+        navigator.notification.beep(1);
         // The battery level and plugged/unplugged status
         alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
     }
 
+    function onBatteryLow(info) 
+    {
+        // the battery low event
+        alert("Battery Level Low " + info.level + "%");
+    }
+
+    function onBatteryCritical(info) 
+    {
+        // the battery critical event
+        alert("Battery Level Critical " + info.level + "% - Save data now!");
+    }
+    
     // Show a custom alert
     //
     function showAlert() {
